@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+$output-bourbon-deprecation-warnings: false !default;
+@import '../../node_modules/bourbon/app/assets/stylesheets/bourbon';
+
+@import 'helpers';
+@import 'functions';
+@import 'mixins';
+
+@import 'bootstrap-variables';
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'bootstrap-overrides';
+
+// @import '../../node_modules/animate-sass/animate';
+// @import 'fontawesome-variables';
+// @import '../../node_modules/font-awesome/scss/font-awesome';
+@import 'fonts';
+
+$bg-color: #ffd794;
+$main-font: 'Verdana',
+monospace;
+
+html {
+  @include box-size(100%);
+}
+
+body {
+  background-color: $bg-color;
+  @include margin(0);
+  @include padding(0);
+  @include box-size(100%);
+  overflow: hidden;
+  position: relative;
+}
+
+.game-canvas-wrapper {
+  @include aspect-ratio(1920, 1080, '.game-canvas');
+  top: 50%;
+  transform: translateY(-50%);
+  .game-canvas {
+    // background: red;
+  }
+}
+
+.editor-table-wrapper {
+  .table {
+    @include margin(0);
+    tr {
+      th,
+      td {
+        vertical-align: middle;
+      }
+    }
+  }
+}

@@ -1,0 +1,133 @@
+// Word Wrapping
+@mixin word-wrap() {
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+@mixin ellipsis($multiline: false, $width: 100%, $font-size: 1.6rem, $line-height: 1.4, $lines-to-show: 3) {
+  @if $multiline {
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    max-width: $width;
+    height: $font-size * $line-height * $lines-to-show; /* Fallback for non-webkit */
+    min-height: $font-size * $line-height * $lines-to-show; /* Fallback for non-webkit */
+    margin: 0 auto;
+    font-size: $font-size;
+    line-height: $line-height;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  } @else {
+    display: inline-block;
+    max-width: $width;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+  }
+}
+
+@mixin box-size($options) {
+  $width: nth($options, 1);
+  $height: $width;
+
+  @if length($options) > 1 {
+    $height: nth($options, 2);
+  }
+
+  @if is-size($height) {
+    height: $height;
+  } @else {
+    @warn "`#{$height}` is not a valid length for the `$height` parameter in the `size` mixin.";
+  }
+
+  @if is-size($width) {
+    width: $width;
+  } @else {
+    @warn "`#{$width}` is not a valid length for the `$width` parameter in the `size` mixin.";
+  }
+}
+
+@mixin font-size($options) {
+  $fontSize: nth($options, 1);
+
+  @if is-size($fontSize) {
+    font-size: $fontSize;
+  } @else {
+    @warn "`#{$fontSize}` is not a valid length for the `$width` parameter in the `size` mixin.";
+  }
+
+  $lineHeight: $fontSize;
+
+  @if length($options) > 1 {
+    $lineHeight: nth($options, 2);
+  }
+
+  @if is-size($lineHeight) {
+    line-height: $lineHeight;
+  } @else {
+    @warn "`#{$lineHeight}` is not a valid length for the `$height` parameter in the `size` mixin.";
+  }
+}
+
+@mixin font($fontFamily, $options: false) {
+  font-family: $fontFamily, Verdana, Arial, sans-serif;
+
+  @if $options {
+    @include font-size($options);
+  }
+}
+
+@mixin aspect-ratio($width, $height, $contentSelector: '.content') {
+  position: relative;
+
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  > #{$contentSelector} {
+    @include position(absolute, 0 0 0 0);
+    @include margin(auto);
+    @include box-size(100%);
+  }
+}
+
+@mixin border-radius($size) {
+  @include border-left-radius($size);
+  @include border-right-radius($size);
+}
+
+@mixin border($options) {
+  $size: nth($options, 1);
+
+  @if is-size($size) {
+    border-width: $size;
+  } @else {
+    @warn "`#{$size}` is not a valid length for the `$width` parameter in the `size` mixin.";
+  }
+
+  $style: nth($options, 2);
+
+  @if contains("none" "hidden" "dotted" "dashed" "solid" "double" "groove" "ridge" "inset" "outset" "initial" "inherit", $style) {
+    border-style: $style;
+  } @else {
+    @warn "`#{$style}` is not a valid length for the `$width` parameter in the `style` mixin.";
+  }
+
+  $color: nth($options, 3);
+
+  @if is-color($color) {
+    border-color: $color;
+  } @else {
+    @warn "`#{$color}` is not a valid length for the `$width` parameter in the `style` mixin.";
+  }
+
+}

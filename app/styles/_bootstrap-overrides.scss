@@ -1,0 +1,94 @@
+$output-bourbon-deprecation-warnings: false !default;
+@import '../../node_modules/bourbon/app/assets/stylesheets/bourbon';
+
+@import 'bootstrap-variables';
+
+$gutter: $grid-gutter-width/2;
+$gutterN: -$gutter;
+$gutterQ: $grid-gutter-width/4;
+$gutterQN: -$gutter;
+
+[class*='container'] {
+  .row {
+    @include margin(0 $gutterN);
+    [class*='col-'] {
+      @include padding(0 $gutterQ);
+      &:first-child {
+        padding-left: $gutter;
+      }
+      &:last-child {
+        padding-right: $gutter;
+      }
+    }
+    +.row {
+      margin-top: $gutter;
+    }
+  }
+}
+
+.form-inline {
+  .form-group {
+    label {
+      display: block;
+    }
+    + .form-group {
+      margin-left: $gutter;
+    }
+  }
+}
+
+.form-control {
+  height: 2.6rem;
+      &[type='number'] {
+        padding: 2px 0 2px 6px;
+        &.text-right {
+          padding: 2px 3px 2px 6px;
+        }
+      }
+}
+
+.input-group {
+  .input-group-addon:not(.input-group-addon-select) {
+    padding: 5px 12px;
+  }
+  .input-group-addon-select{
+    padding: 0;
+    border: 0;
+  }
+}
+
+.tooltip-editor {
+  .tooltip-inner {
+    color: rgb(50,50,50);
+    background: rgb(145, 240, 145);
+    border: solid 2px rgb(90, 160, 90);
+  }
+  &.top {
+    .tooltip-arrow {
+      border-top-color: rgb(90, 160, 90);
+    }
+  }
+  &.right {
+    .tooltip-arrow {
+      border-right-color: rgb(90, 160, 90);
+    }
+  }
+  &.bottom {
+    .tooltip-arrow {
+      border-bottom-color: rgb(90, 160, 90);
+    }
+  }
+  &.left {
+    .tooltip-arrow {
+      border-left-color: rgb(90, 160, 90);
+    }
+  }
+}
+
+.table {
+  width: 100%;
+  background: #fff;
+  + .table {
+    margin-top: $gutter;
+  }
+}

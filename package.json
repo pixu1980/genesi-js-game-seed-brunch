@@ -1,0 +1,43 @@
+{
+  "name": "genesi-js-seed",
+  "description": "GenesiJS Seed",
+  "private": true,
+  "author": "blackmirror1980",
+  "version": "0.0.1",
+  "repository": "",
+  "scripts": {
+    "start": "brunch w -s",
+    "build": "brunch b -p"
+  },
+  "dependencies": {
+    "flavor-js": "^0.3.0",
+    "genesi-js": "^0.1.1",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "animate-sass": "^0.6.6",
+    "auto-reload-brunch": "^2.7.1",
+    "autoprefixer": "^6.7.7",
+    "babel": "^6.23.0",
+    "babel-brunch": "^6.1.1",
+    "babel-plugin-module-alias": "^1.6.0",
+    "babel-plugin-resolve-bower-module": "^1.0.6",
+    "babel-preset-latest": "^6",
+    "bootstrap-sass": "^3.3.7",
+    "bourbon": "^4.3.4",
+    "brunch": "^2.10.9",
+    "clean-css-brunch": "^2.10.0",
+    "copycat-brunch": "^1.1.0",
+    "csswring": "^5.1.1",
+    "eslint": "^3.19.0",
+    "eslint-brunch": "^3.12.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "font-awesome": "^4.7.0",
+    "sass-brunch": "^2.10.4",
+    "uglify-js-brunch": "^2.10.0"
+  }
+}
