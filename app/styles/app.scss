@@ -17,8 +17,7 @@ $output-bourbon-deprecation-warnings: false !default;
 @import 'fonts';
 
 $bg-color: #ffd794;
-$main-font: 'Verdana',
-monospace;
+$main-font: 'Verdana', monospace;
 
 html {
   @include box-size(100%);
@@ -38,7 +37,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   .game-canvas {
-    // background: red;
+    background: lightcoral;
   }
 }
 

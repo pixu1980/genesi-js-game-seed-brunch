@@ -1,20 +1,16 @@
-module.exports = {
+export default {
   editor: false,
   debug: false,
   canvas: {
     selector: '.game-canvas',
-    // size: {
-    //   width: 1920,
-    //   height: 1080,  
-    // },
-    size: '100%',
     ar: {
       width: 1920,
       height: 1080,
     },
   },
   ticker: {
-    fps: 60,
+    FPS: 60,
+    showFPS: true,
     timingMode: 'RAF',
   },
   locale: 'it',

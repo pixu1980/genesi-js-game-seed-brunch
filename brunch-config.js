@@ -53,6 +53,15 @@ module.exports = {
     },
   },
   plugins: {
+    spritesheet: {
+      files: 'app/assets/images/**/*.png',
+      path: 'app/assets/spritesheets/',
+      format: 'easel.js',
+      name: 'atlas',
+      trim: true,
+      padding: 10,
+      sort: 'maxside',
+    },
     sass: {
       // gem_home: '/Library/Ruby/Gems/2.0.0/gems/sass-3.4.23',
       // mode: 'ruby',
@@ -108,10 +117,11 @@ module.exports = {
     },
     order: [
       'sass-brunch',
-      'copycat-brunch',
       'eslint-brunch',
       'babel-brunch',
       'uglify-js-brunch',
+      'spritesheet-js-brunch',
+      'copycat-brunch',
     ],
   },
   modules: {

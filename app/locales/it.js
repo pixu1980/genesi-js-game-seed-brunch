@@ -1,5 +1,5 @@
 module.exports = {
   labels: {
-    continue: 'vkjfnkfgjn',
+    continue: 'Continua',
   },
 };

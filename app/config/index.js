@@ -1,6 +1,12 @@
 import environment from './environment';
 import game from './game';
-import assets from './assets';
+import manifests from './manifests';
+
+const config = {
+  environment,
+  game,
+  manifests,
+};
 
 /**
  * @namespace Config
@@ -9,8 +15,4 @@ import assets from './assets';
  * @property {array} game - 
  * @property {array} assets - 
  */
-export {
-  environment,
-  game,
-  assets,
-};
+export default config;
