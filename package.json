@@ -10,11 +10,9 @@
     "build": "brunch b -p"
   },
   "dependencies": {
-    "create-es6-js": "^0.1.5",
-    "flavor-js": "^0.3.5",
-    "genesi-js": "^0.1.11",
-    "jquery": "^3.2.1",
-    "lodash": "^4.17.4"
+    "flavor-js": "^0.3.9",
+    "genesi-js": "^0.1.13",
+    "jquery": "^3.2.1"
   },
   "devDependencies": {
     "animate-sass": "^0.6.6",
