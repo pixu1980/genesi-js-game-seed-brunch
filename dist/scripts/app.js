@@ -10607,7 +10607,7 @@ var Game = function (_Engine$Game) {
         align: 'left bottom',
         scale: 1.5
       }).setPosition({
-        x: -this.ENVIRONMENT.get('canvas.width') * 2
+        x: -this.ENVIRONMENT.get('canvas.ar.width') * 2
       }).animate({
         animationName: 'anim'
       });
@@ -10617,7 +10617,7 @@ var Game = function (_Engine$Game) {
         align: 'left bottom',
         scale: 1.5
       }).setPosition({
-        x: -this.ENVIRONMENT.get('canvas.width') * 1.4
+        x: -this.ENVIRONMENT.get('canvas.ar.width') * 1.4
       }).animate({
         animationName: 'anim'
       });
@@ -10627,7 +10627,7 @@ var Game = function (_Engine$Game) {
         align: 'left bottom',
         scale: 1.5
       }).setPosition({
-        x: -this.ENVIRONMENT.get('canvas.width') * 1.2
+        x: -this.ENVIRONMENT.get('canvas.ar.width') * 1.2
       }).animate({
         animationName: 'anim'
       });
@@ -10637,7 +10637,7 @@ var Game = function (_Engine$Game) {
         align: 'left bottom',
         scale: 1.5
       }).setPosition({
-        x: -this.ENVIRONMENT.get('canvas.width')
+        x: -this.ENVIRONMENT.get('canvas.ar.width')
       }).animate({
         animationName: 'anim'
       });
@@ -10647,19 +10647,19 @@ var Game = function (_Engine$Game) {
       }, 3500, _genesiJs.Anim.Ease.linear);
 
       _genesiJs.Anim.Tween.get(this.tiger).to({
-        x: this.ENVIRONMENT.get('canvas.width') + this.tiger.getComputedBounds().width
+        x: this.ENVIRONMENT.get('canvas.ar.width') + this.tiger.getComputedBounds().width
       }, 5600, _genesiJs.Anim.Ease.linear);
 
       _genesiJs.Anim.Tween.get(this.giant).to({
-        x: this.ENVIRONMENT.get('canvas.width') + this.giant.getComputedBounds().width
+        x: this.ENVIRONMENT.get('canvas.ar.width') + this.giant.getComputedBounds().width
       }, 6000, _genesiJs.Anim.Ease.linear);
 
       _genesiJs.Anim.Tween.get(this.girl).to({
-        x: this.ENVIRONMENT.get('canvas.width') + this.girl.getComputedBounds().width
+        x: this.ENVIRONMENT.get('canvas.ar.width') + this.girl.getComputedBounds().width
       }, 6000, _genesiJs.Anim.Ease.linear);
 
       _genesiJs.Anim.Tween.get(this.kid).to({
-        x: this.ENVIRONMENT.get('canvas.width') + this.kid.getComputedBounds().width
+        x: this.ENVIRONMENT.get('canvas.ar.width') + this.kid.getComputedBounds().width
       }, 6000, _genesiJs.Anim.Ease.linear);
     }
   }]);
