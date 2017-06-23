@@ -1,4 +1,4 @@
-// import Game from './Game';
+import Game from './Game';
 import config from '../config';
 import locales from '../locales';
 

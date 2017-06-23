@@ -10674,6 +10674,10 @@ exports.default = Game;
 require.register("scripts/app.js", function(exports, require, module) {
 'use strict';
 
+var _Game = require('./Game');
+
+var _Game2 = _interopRequireDefault(_Game);
+
 var _config = require('../config');
 
 var _config2 = _interopRequireDefault(_config);
@@ -10684,7 +10688,6 @@ var _locales2 = _interopRequireDefault(_locales);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import Game from './Game';
 document.addEventListener('DOMContentLoaded', function () {
   debugger;
   // window.onload = new Game(config.environment, config.manifests, locales);
